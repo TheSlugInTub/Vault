@@ -1,0 +1,18 @@
+In Bloodborne, the hunter wakes up in a clinic in a city called Yharnam with a strange man saying that you'll need a bit of paleblood and asks you to sign a contract to help their city.
+Yharnam is known for their blood ministration as they have access to a special blood which they say can cure all illnesses. 
+A lot of people are after this blood because they want to be cured, it's in high demand, so the city asks the people who want the blood to sign a contract to help their city.
+You came into Yharnam as an outsider seeking this blood.
+After heading downstairs, you try to fight a sickly beast, but die because you're too weak to fight it.
+After this, you wake up with several pale little creatures on you and get teleported to a place called the Hunter's Dream, these things are called messengers, and they aid and help hunters in the Hunter's Dream which is how you got access to the Hunter's Dream.
+The blood of Yharnam has a secret to it that the blood ministry of Yharnam doesn't want people to know, it turns people into beasts, it's as intoxicating as alcohol which is why people seek more of it.
+The city of Yharnam wants as many people to join the hunt to hunt and kill these beasts which is what the contract is for.
+And the hunter eventually makes their way to a place called Byrgenwerth, which was a place of study for Yharnam and the hunter finds a man called Master Willem who was the head of the academics at Byrgenwerth. He can't talk to you but points you towards the sea and as you enter closer to it, you get transported to another dimension where there is only water, and the only thing here is Rom the vacuous spider. You eventually kill Rom and wake up from the nightmare, but as soon as you look up, a giant otherworldly beast with six shadowy limbs and a flesh cage as a head peers at you from above.
+At this point in the story, we realize that Bloodborne was never about the hunt, but ascension and godly beings.
+A long time ago, a race of people called the Pthumerians discovered something called the eldritch truth, it was revealed to them, the existence of beings beyond their comprehension called the Great Ones, entities that lived in a higher plane of existence.
+Over the course of time, the Phthumerians became their protectors and guardians, and the Great Ones all ascended to a plane higher than they were before, all except one, a Great One named Ebrietas.
+The Phthumerians developed a hierarchy and social system crowning a queen as their head, they crowned a queen called Yharnam who gave to a half-human, half-Great One hybrid creature called Mergo. The Great Ones are doomed to lose their kin so they look for substitutes to bear them.
+
+At the Byrgenwerth academy, they stumbled upon the Chalice Dungeons where the Phthumerians resided and where the Great Ones were discovered, and they discovered the blood of the Great Ones. The two main people at Byrgenwerth, Lawrence and Willem, had a disagreement over the use of the blood. Lawrence believed that the blood was key to humanity's ascension but Willem thought that the blood was dangerous and that more eyes were the key. So, Lawrence left the Byrgenwerth college and made the Healing Church.
+But the rapid growth of the beast scourge was worsening so Lawrence and Gehrman made Hunters' workshops where there were a lot of weapons and supplies for hunters to kill the beasts with.
+After the fall of the Healing Church, since the blood was obviously proven to not be working, two new organizations were created: the Church of Mensis and the Choir.
+The Church of Mensis was founded by Micolash.
