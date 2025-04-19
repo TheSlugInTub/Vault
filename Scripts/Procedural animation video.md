@@ -96,8 +96,8 @@ And for the technique I was going to use, I would need to render every drawn spr
 will do the shadow calculations and then I would render the frame buffer as a quad that covers the screen because I don't want all non-background sprites to not be visible.
 And voila! We have faux shadows. This took me two days to add.
 
-And this is pretty much where I got, as of late. This has been a super cool and fun project for me, and I am going to create my own game with this, I am obviously going to make 
-it different to Rain World of course, since I don't want this to be a rip off of it. And if you want to see me develop this game further, then please like and subscribe to the channel
+And this is pretty much where I got, as of late. This has been a super cool and fun project for me. And if you want to see me develop this game further, 
+and do more cool stuff like this in the future, then please like and subscribe to the channel
 to help me out, as that pushes this video in the algorithm. So, hopefully you enjoyed this video, and I'll see ya in the next, see ya.
 
 # Timeline:
@@ -178,13 +178,15 @@ For this I would need to render every drawn sprite to a framebuffer, I then pass
 calculations and then I would render the frame buffer as a quad that covers the screen because I don't want all non-background sprites to not be visible.
 And voila! We have faux shadows. This took me two days to add.
 
-And then I needed to make some levels of course, so I researched how Rain World does its beautiful levels and it basically takes a collage out of hand-drawn elements and mashes it 
+And then I needed to make some levels of course, so I researched how Rain World does its beautiful levels and it basically 
+takes a collage out of hand-drawn elements and mashes it 
 together into a .png whose red channel has pallette information and this .png is colored in real-time with a pallette png.
 
 So I made a new project using salmon engine called RatEditor which will be the level editor of Bombratter. [Fixed up the project]
 In the project I made three panels, one for the tilemap which is kind of useless, one for the tray which holds the layer [Slightly working tilemap placement]
 of the tile you're placing, and one for the actual tiles that the editor is going to render out in the .png.
-I made a system which asks you for textures to render the tilemap with. You then place down these dummy textures into the tilemaps to act as simplified walls/materials.
+I made a system which asks you for textures to render the tilemap with. You then place down these dummy textures into the tilemaps to act 
+as simplified walls/materials.
 And then I made a screen width and screen height parameter to control the size of the final image.
 I used the stb_image_write.h library, I know it's not particularly fast or efficient but it's simple, ok? And that's all that matters.
 And finally we have an image rendering to a .png!!! [FINALLY, OUTPUT PNG LETS GO!!]
@@ -193,3 +195,51 @@ And then I also added so you could hold P to place down a box of tiles for conve
 I also made it so you can delete tiles within a box by holding down P and delete, and add them back with P and O.
 My fingers are completely cramped now, but that's just the cost of having an unfinished, poorly documented and poorly designed internal level editor. 
 **DON'T WORRY I'M GONNA POLISH IT UP AND MAKE YOU ABLE TO USE IT** [Tilemap box removal]
+
+And then I made the tile texture into this weird red abomination, now you might be wondering 'What the hell is this?' But this is tile is 
+actually going to be colored in by the game in real-time by a palette. A palette is a .png which stores the colors of how everything is going to look.
+I only have the sky box color, the plants color and the terrain colors at the moment, but I'm sure I will add more in the future.
+And I wrote a little document explaining how the level png's red channel is going to be used for the palette information.
+If the red channel is below 80, then we divide it by 5 and get the corresponding terrain color in the second row of the palette.
+And I spent WAY too long trying to get it to work. But it was just not working. I tried to use GLSL's texelFetch but it was just returning empty,
+[Broken palette rendering]
+and I looked upon stackoverflow, reddit, and god forbid... even the second page of google, yeah I was desperate.
+But after all this, I realized that the texture coordinates in texelFetch are REVERSED, this means that instead of 1,1 being at the top-left, it's at the bottom-left.
+But after fixing that up, it works now. [Fixed palette rendering!] And hey look at that, I can even adjust the colors
+
+And then I made rule tiles for the terrain. And if you don't know what rule tiles are, they are tiles that adjust their texture based on the tiles around them.
+I whipped up 13 tile textures for all the combinations I need. And made some logic to check every tile to see if there is a tile above,
+below, to the right, to the left or to 
+the corners of the tile, ok.. I know it's O(n2) but it's an internal tool ok? It doesn't need to be fast.
+So if there is a tile in any of the directions, set that direction in a directions array. And we do some logic to
+check what texture a tile should be for its directions.
+And testing it out... It doesn't work. Obviously, why would it. And I spent about a day or two wondering where in my life, did I go so wrong? [Broken as ever]
+And then I finally realized that I missed two lines of code in this function, of course I did.  [Fixed logic tiles]
+
+And then I wanted to add tile colliders so I could actually interact with the world.
+The technique I'm going to use for this is that I loop over each pixel of the background image, and if the pixel's red channel is below or equal to 80, then 
+the whole 16x16 tile was a collider.
+And I store a map of tile colliders in a 2d grid. I then merge these colliders, so there aren't just a million colliders for each tile. 
+And I finally create entities and add colliders to them. But as you might expect by now, the code didn't work.
+And I spent yet another two days on the tile colliders trying to understand why the game was crashing... 
+EACH... GODDAMN... TIME I tried to run the code. And it was a different error each time too.
+Something was going wrong with the image data I was looping over which was supposed to be the background sprite. 
+But after using stb_image_write to inspect this data. IT WAS THE GODDAMN PALETTE TEXTURE AND NOT THE BACKGROUND SPRITE.
+And then finally it worked. [Fix broken tile colliders]
+
+But then I realized something, my custom physics engine is very unstable, and it would be a bad move to go forward with it, 
+because it's not ever gonna be as good as Box2D. So I started integration on Box2D into the engine.
+So it took about two days to get the box2d integration working, and it's all in the physics_2d.h and physics_2d.cpp files of the engine.
+And also I spent about two hours wondering why it kept crashing, with, you guessed it, a different error each time.
+This time it turned out that I wasn't intitializing my pointers to null, so they got filled in random gibberish.
+Initialize your pointers kids, it'll save you 4 hours of debugging. [Working Box2D integration]
+And then I added box2d rigidbodies and colliders instead of sm2d and it worked well! I still need to use box2d for the player tho.
+[Working Box2D items and level colliders but not the player]
+
+Then I began to port all of the player sm2d code to Box2D, and for the longest time I wondered why it kept crashing when i added springs, but then I realized
+that I was making the springs before I even created the bodies (calling the start sys), which was very stupid.
+
+But one thing I was really starting to get annoyed at was the compilation speed, it took about a minute for every single goddamn change to compile.
+So I did what any sane person would do, I rewrote the whole project in C. I made all the basic utilities like a vector class, and I also tried adding cimgui to the project 
+but I just couldn't get it to work with the project, so I made my own C bindings for ImGui, I also made C bindings for nlohmann::json library, since I couldn't find a 
+good json library for C. The only thing I didn't write in C was the ECS. Since writing an ECS in C is the best way to waste a year of your life.
