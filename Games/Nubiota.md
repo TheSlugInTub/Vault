@@ -7,12 +7,18 @@ It is mostly inspired by Pathologic and Darkwood.
 
 You are a young child named Ilya who has gotten on a train to go 
 somewhere but the train gets derailed and lands in the Norwegian tundra.
-The tundra is a beautiful place with plenty of hills and valleys, a lot of
-temples, mysterious buildings, and a strange town all throughout but mostly 
-concentrated in the middle.
+The tundra is a beautiful place with plenty of hills and valleys, a lot 
+of temples, mysterious buildings, and a strange town all throughout but 
+mostlyconcentrated in the middle.
 
-But a day in, you realize that a disease is spreading, a disease called
-the 
+But a day in, you realize that a disease is spreading, this disease is 
+characterized by the blackening of the veins and degenerates your brain
+to think abnormally and behave hostile and mindless.
+
+
+
+A gang tries to take control and tries to get in power through the mass
+panic and confusion caused by the disease.
 
 # Gameplay
 
@@ -36,3 +42,8 @@ goose chase for the leader and find out the criminals lied to you who the
 leader was and they've alreeady wreaking havoc, and then you go to the 
 guy who gave you the quest and he orders you to kill the criminals and
 gives you money after you dispose of them.
+
+You also have a diary in which quests are written down. There will be no 
+markers on the map. The map will have buildings and places marked down 
+withtheir names and the quests will tell you which place to go to, but 
+won't make it super obvious on the map.
