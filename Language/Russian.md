@@ -238,4 +238,3 @@ Mы где? - Where are we?
 she: понимает, he: понимает - Understand
 i: говорит, - Speak
 it: работает, - Work
-

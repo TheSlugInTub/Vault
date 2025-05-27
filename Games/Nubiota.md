@@ -63,9 +63,9 @@ we have a camp, south of the docks. Here, take some food and water."
 You head into the town and spend the day mostly exploring and meeting 
 the people of the town. You get a few quests and make some allies.
 
-[Insert more detail about day 1 and how it unfolds here]
+[more detail about day 1 and how it unfolds here]
 
-[Insert more days here]
+[more days here]
 
 # Gameplay
 
