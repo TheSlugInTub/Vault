@@ -16,7 +16,7 @@ unknown reasons, and you'll have to perform surgeries and other busywork yoursel
 
 You'll have a diary in which symptoms of common diseases are written down to identify them.
 
-You'll have a list of administed patients, their symptoms and medical record.
+You'll have a list of administered patients, their symptoms and medical record.
 
 In 2 days, one of your patients comes in with a mysterious disease, the likes of which you 
 have never heard of. The entire hospital will soon be engulfed by it, and a large chunk of 
@@ -37,6 +37,10 @@ conditions they might have, any bad habits they might have, and anything harmful
 This information will get added to their patient file. You can perform a physical examination
 on them to narrow down your diagnosis.
 You will check them with a variety of instruments. A thermometer, an x-ray and more.
+
+When looking at the patient, you will get two options to interact with them. Either through 
+talking, or performing tests. Clicking 'Perform test' brings up your inventory and you can 
+click any of the testing instruments you have on you.
 
 There are a list of diagnoses written down in your notebook:
 
@@ -124,27 +128,22 @@ Description: Inflammation of the protective membranes covering the brain and spi
 Symptoms: Severe headache, neck stiffness, fever, sensitivity to light, altered mental status, rash
 Treatment: Immediate antibiotics, corticosteroids, supportive care
 
-### 16. Acute Hepatitis
-Description: Inflammation of the liver caused by viruses, toxins, or autoimmune conditions.
-Symptoms: Jaundice, abdominal pain, nausea, vomiting, fatigue, dark urine, pale stools
-Treatment: Supportive care, avoid hepatotoxins, specific antivirals if viral, liver transplant if fulminant
-
-### 17. Hypertensive Crisis
+### 16. Hypertensive Crisis
 Description: Severe elevation in blood pressure causing end-organ damage.
 Symptoms: Severe headache, blurred vision, chest pain, shortness of breath, confusion, seizures
 Treatment: Controlled blood pressure reduction, antihypertensive medications, treat complications
 
-### 18. Acute Bronchitis
+### 17. Acute Bronchitis
 Description: Inflammation of the bronchial tubes, usually caused by viral infection.
 Symptoms: Persistent cough, mucus production, chest discomfort, mild fever, fatigue
 Treatment: Supportive care, cough suppressants, bronchodilators if wheezing present
 
-### 19. Peptic Ulcer Disease
+### 18. Peptic Ulcer Disease
 Description: Erosions in the stomach or duodenal lining, often caused by H. pylori or NSAIDs.
 Symptoms: Burning stomach pain, bloating, heartburn, nausea, vomiting, dark stools if bleeding
 Treatment: Proton pump inhibitors, H. pylori eradication therapy, avoid NSAIDs
 
-### 20. Cellulitis
+### 19. Cellulitis
 
 Description: Bacterial infection of the skin and soft tissues, commonly caused by Streptococcus or Staphylococcus.
 
@@ -152,16 +151,16 @@ Symptoms: Red, swollen, warm skin, pain, fever, red streaking, swollen lymph nod
 
 Treatment: Antibiotics (oral or IV depending on severity), the antibiotics will be specific to treat the species of 
 Streptococcus, elevation of affected area, pain management.
-You will use penicillins to treat this and if the patient is penicillin allergic, then cephalosporin must be used.
+You will use penicillins to treat this and if the patient is penicillin allergic, then cephalosporins must be used.
 500 milligrams of antibiotics must be taken four times a day, the least amount of time that can pass between doses 
 is 2 hours.
 
-### 21. Malaria
+### 20. Malaria
 Description: Parasitic infection transmitted by Anopheles mosquitoes, caused by Plasmodium species.
 Symptoms: Cyclical fever and chills, sweating, headache, muscle aches, fatigue, nausea, vomiting, anemia
 Treatment: Antimalarial medications (chloroquine, artemisinin-based combinations), supportive care, blood transfusion if severe
 
-### 22. Measles (Rubeola)
+### 21. Measles (Rubeola)
 Description: Highly contagious viral infection causing characteristic rash and respiratory symptoms.
 Symptoms: High fever, cough, runny nose, red watery eyes, Koplik's spots in mouth, red blotchy rash starting at face
 Treatment: Supportive care, vitamin A supplementation, isolation to prevent spread, treat complications
@@ -179,4 +178,19 @@ surgery, she will be discharged.
 
 A male patient is sitting on a chair in the middle of the hall. His diagnosis is Cellulitis.
 The type of bacteria he posesses is Streptococcus pyogenes. You'll have to use amoxicellin
-to treat the patient, giving him 500mg of amoxicellin 4 times a day.
+to treat the patient, giving him 500mg of amoxicellin 4 times a day for 7 days, he'll be 
+administered into the ward.
+
+A teenager is standing near the entrance. His diagnosis is Acute bronchititis.
+He has been coughing a lot for 3 days straight and has a mild fever.
+
+## Day 2
+
+A young man is sitting down at a chair. His diagnosis is Hypertensive Crisis.
+
+# NOTES
+
+Vancomycin is less effective when taken orally than intravenously.
+Ceftriaxone is FAR less effective when taken orally than intravenously.
+
+There are two types of penicillin. Penicillin G is transmitted intravenously, while penicillin V is transmitted orally.
