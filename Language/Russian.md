@@ -233,6 +233,18 @@ Mы - We
 
 Mы где? - Where are we?
 
+только - Only
+
+пули - Bullets
+
+пуля - Bullet
+
+свистят - Whistle
+
+по - Across/by
+
+степи - Steppe
+
 # Verbs
 
 she: понимает, he: понимает - Understand

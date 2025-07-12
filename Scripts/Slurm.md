@@ -117,3 +117,38 @@ interact with the pseudoconsole at all.
 I BUILD THE INPUT LAYER BRICK BY BRICK. AND YOU AINT GOIN TEAR IT DOWN.
 I have succesfully built the input listener which takes input from the main terminal and delivers it to the pseudoconsole.
 It also takes characters like escape and other such nefarious keys. The terminal also supports unicode now.
+
+## Eleventh recording
+
+The status line I implemented wasn't working. It was printing at the top when it should've been printing at the bottom [BROKEN STATUS BAR]
+This was happening because the output from the pseudoconsole was fighting for the cursor's attention.
+I just replaced the status drawer thread with drawing the status bar in the PipeListener.
+But now the last line is overwritten by the status bar. I fixed this by making the pseudoconsole smaller.
+
+## Twelvth recording
+
+Now I will implement terminal multiplexing.
+I ran into an issue where program was crashing if I made a split. This was due to me making threads in the functions, and the threads 
+terminating when going out of scope, I made the threads detach to keep them running in the background.
+
+## Thirteenth recording 
+
+It turns out, I couldn't render multiple terminals with ANSI escape codes alone. I needed ncurses. But for that, I'll need to build 
+an ANSI parser for ncurses first.
+So actually, I got started on the multiplexing first since it's more important.
+THE MULTIPLEXING WORKS LETS GO [Working multiplexing]
+But it only works on the first split for some reason. Hmmm...
+Well, since I couldn't debug using console output, I had to use a file and write stuff in it to debug the problem, and the problem was 
+that the sizes and position for the new split were way off. [Way off sizes and positions for new split]
+Turns out, the reason for the crash is that I wasn't setting the size of the new pseudoconsoles, very stupid.
+
+## Fourteenth recording 
+
+I will try to get nvim working, ANSI isn't working... damn.
+I will try to get the not-curses approach trying to work again.
+
+## New start at life
+
+I will try to get it working again, I left for a couple days, giving up hope for the project. I will restart with no ncurses and only 
+ANSI escape codes.
+I have rebuilt a lot of what I have built before.
